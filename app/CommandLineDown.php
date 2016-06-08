@@ -7,7 +7,7 @@ use Symfony\Component\Process\Exception\ProcessFailedException;
 use Symfony\Component\Process\Process;
 use Symfony\Component\Process\ProcessBuilder;
 
-class Down
+class CommandLineDown implements InterfaceDown
 {
 
     public $url;
@@ -15,7 +15,7 @@ class Down
     private $config;
 
 
-    function __construct($url)
+    public function __construct($url)
     {
         if (! $url) {
             return;
@@ -27,10 +27,10 @@ class Down
     }
 
 
-    function doDown()
+    public function doDown()
     {
         $process = new Process($this->getDownOrder());
-        $process->setWorkingDirectory($this->getDownPath());
+        $process->setWorkingDirectory($this->getSavePath());
         $process->setTimeout(0);
 
         try {
@@ -47,16 +47,16 @@ class Down
     }
 
 
-    private function getDownPath()
+    public function getSavePath()
     {
-        if (! file_exists($this->config['down_path'])) {
-            mkdir($this->config['down_path']);
+        if (! file_exists($this->config['save_path'])) {
+            mkdir($this->config['save_path']);
         }
-        return $this->config['down_path'];
+        return $this->config['save_path'];
     }
 
 
-    function getDownFIleName()
+    public function getFIleName()
     {
         $p = parse_url($this->url)['query'];
         parse_str($p, $t);
@@ -65,7 +65,7 @@ class Down
     }
 
 
-    function getDownOrder()
+    public function getDownOrder()
     {
         $builder = new ProcessBuilder();
         $builder->setPrefix('proxychains4');
@@ -74,7 +74,7 @@ class Down
             'axel',
             '-a',
             '-n 8',
-            '-o ' . $this->getDownFIleName(),
+            '-o ' . $this->getFIleName(),
             $this->url,
         ])->getProcess()->getCommandLine();
     }

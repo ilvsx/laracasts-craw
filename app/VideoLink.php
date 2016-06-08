@@ -71,8 +71,17 @@ class VideoLink
         return $redirect;
     }
 
+    public function getFIleName()
+    {
+        $p = parse_url($this->video_link)['query'];
+        parse_str($p, $t);
 
-    public function get($uri)
+        return trim($t['filename']);
+    }
+
+
+    // HTTP GET request.
+    private function get($uri)
     {
         return $this->client->get($uri, $this->options);
     }

@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="908215ce-e738-4878-8e86-657cc0a7c130" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Readme.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/InterfaceDown.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Down.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/composer.lock" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/VideoLink.php" afterPath="$PROJECT_DIR$/app/VideoLink.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config.php" afterPath="$PROJECT_DIR$/app/config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/craw.php" afterPath="$PROJECT_DIR$/app/craw.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/dom-crawler/Tests/CrawlerTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/dom-crawler/Tests/CrawlerTest.php" />
-    </list>
+    <list default="true" id="908215ce-e738-4878-8e86-657cc0a7c130" name="Default" comment="" />
     <ignored path="laracasts.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -238,12 +227,12 @@
       <workItem from="1464577615867" duration="340000" />
       <workItem from="1464588671931" duration="828000" />
       <workItem from="1464594949461" duration="477000" />
-      <workItem from="1465355974255" duration="258000" />
+      <workItem from="1465355974255" duration="788000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50005000" />
+    <option name="totallyTimeSpent" value="50535000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="4" y="23" width="1916" height="1057" extended-state="0" />

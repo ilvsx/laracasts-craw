@@ -6,10 +6,16 @@
 git clone https://github.com/ilvsx/laracasts-craw.git
 ```
 
+进入项目目录
+```php
+cd laracasts-craw
+```
+
 安装相关库
 ```php
 composer install
 ```
+> 由于网络原因，建议使用 [Packagist / Composer 中国全量镜像](http://pkg.phpcomposer.com/) 来加速安装过程
 
 
 ## 配置
@@ -42,4 +48,7 @@ new CommandLineDown(new VideoLink($uri));
 new CurlDown(new VideoLink($uri));
 ```
 
-最后执行`php app/craw.php`
+#### 最后执行
+```php
+php app/craw.php
+```

@@ -16,6 +16,12 @@ set_time_limit(0);
 
 // echo new VideoLink($uri);
 
+/**
+ * 批量解析
+ */
+// foreach ($uris as $uri) {
+//     echo new VideoLink($uri);
+// }
 
 /**
  * 通过 axel 下载视频

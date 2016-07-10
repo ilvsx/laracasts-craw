@@ -18,7 +18,10 @@ class CurlDown implements InterfaceDown
 
     public function __construct($url)
     {
-        $this->url    = $url;
+        if (! $url) {
+            return;
+        }
+        $this->url    = trim($url);
         $this->config = require 'config.php';
         echo 'start down...' . PHP_EOL;
         $this->doDown();
@@ -59,4 +62,3 @@ class CurlDown implements InterfaceDown
     }
 
 }
-

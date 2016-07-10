@@ -20,7 +20,7 @@ class CommandLineDown implements InterfaceDown
         if (! $url) {
             return;
         }
-        $this->url    = $url;
+        $this->url    = trim($url);
         $this->config = require 'config.php';
         echo 'start down...' . PHP_EOL;
         $this->doDown();
@@ -68,16 +68,14 @@ class CommandLineDown implements InterfaceDown
     public function getDownOrder()
     {
         $builder = new ProcessBuilder();
-        $builder->setPrefix('proxychains4');
+        $builder->setPrefix('axel');
 
         return $builder->setArguments([
-            'axel',
             '-a',
             '-n 8',
-            '-o ' . $this->getFIleName(),
+            '-o' . $this->getFIleName(),
             $this->url,
         ])->getProcess()->getCommandLine();
     }
 
 }
-

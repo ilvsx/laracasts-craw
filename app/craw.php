@@ -6,7 +6,7 @@ require __DIR__ . '/../vendor/autoload.php';
 date_default_timezone_set('PRC');
 set_time_limit(0);
 
-// $uri = 'https://laracasts.com/series/git-me-some-version-control/episodes/1';
+$uri = 'https://laracasts.com/series/learning-vue-step-by-step/episodes/14';
 
 
 
